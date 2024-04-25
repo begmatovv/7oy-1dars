@@ -47,14 +47,13 @@ function App() {
     setText("");
     setTitle("");
   };
-
-  const isCompleted = (id) => {
-    dispatch(completedTodo(id));
-  };
+  function isCompleted() {
+    completedTodo;
+  }
 
   return (
     <div className="align-el">
-      <h1 className="text-3xl font-bold mb-4 text-center">Todos</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Todo List</h1>
       <form onSubmit={handleSubmit} className="mb-4 text-center">
         <input
           className="input input-bordered w-full max-w-xs"
@@ -77,7 +76,7 @@ function App() {
               <h4 className="p-5">{todo.text}</h4>
               <input
                 type="checkbox"
-                defaultChecked={todo.completed}
+                defaultChecked={isCompleted}
                 className=" mr-5"
               />
             </div>
